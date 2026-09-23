@@ -41,11 +41,11 @@ main{padding:24px 0 80px}
  padding:36px 28px;box-shadow:var(--shadow)}
 .hero:after{content:"🦋";position:absolute;right:24px;bottom:-16px;font-size:100px;opacity:.09;transform:rotate(-12deg)}
 .eyebrow{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:800}
-h1{font-size:clamp(36px,7vw,68px);line-height:.98;margin:10px 0 14px;letter-spacing:-2.5px}
-h2{font-size:26px;line-height:1.15;margin:0}
-h3{margin:0;font-size:18px}
+h1{font-size:clamp(30px,6vw,56px);line-height:.98;margin:10px 0 14px;letter-spacing:-2.5px}
+h2{font-size:23px;line-height:1.15;margin:0}
+h3{margin:0;font-size:15px}
 p{margin:0;color:var(--muted)}
-.hero p{max-width:620px;font-size:16px}
+.hero p{max-width:620px;font-size:14px}
 .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 .btn{border:1px solid var(--line);background:var(--card);padding:11px 15px;border-radius:14px;color:var(--text);font-weight:750}
 .btn.primary{background:linear-gradient(135deg,#ff9f7a,#c9a6ff);color:#17131c;border:0}
@@ -70,11 +70,11 @@ p{margin:0;color:var(--muted)}
 .tag.green{color:#d8f1e2;background:rgba(168,215,189,.12)}
 .statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .stat{padding:15px;border:1px solid var(--line);border-radius:18px;background:var(--card)}
-.stat b{display:block;font-size:25px}.stat span{font-size:12px;color:var(--muted)}
+.stat b{display:block;font-size:22px}.stat span{font-size:12px;color:var(--muted)}
 .schedule-list{display:grid;gap:10px}
 .schedule-item{display:grid;grid-template-columns:72px 1fr auto;gap:12px;align-items:center;padding:13px;border:1px solid var(--line);border-radius:17px;background:var(--card)}
 .datebox{border-radius:14px;background:#24212d;text-align:center;padding:8px 4px}
-.datebox b{font-size:20px;display:block;line-height:1}.datebox span{font-size:10px;color:var(--muted);text-transform:uppercase}
+.datebox b{font-size:17px;display:block;line-height:1}.datebox span{font-size:10px;color:var(--muted);text-transform:uppercase}
 .thumb{width:72px;height:72px;border-radius:13px;object-fit:cover;background:#292631}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
 .filter{border:1px solid var(--line);background:var(--card);color:var(--muted);padding:8px 11px;border-radius:999px;font-size:12px}
@@ -100,7 +100,7 @@ p{margin:0;color:var(--muted)}
 .dow{min-height:auto;font-size:10px;color:var(--muted);font-weight:800;text-align:center;background:#17151d}
 .day:nth-child(7n){border-right:0}.day.empty{background:#15131b}.daynum{font-size:12px;font-weight:800}
 .day.today .daynum{display:inline-flex;background:var(--yellow);color:#17131b;border-radius:7px;padding:2px 6px}
-.eventdot{display:block;margin-top:5px;padding:4px 5px;border-radius:7px;font-size:9px;line-height:1.2;overflow:hidden}
+.eventdot{display:block;margin-top:5px;padding:4px 5px;border-radius:7px;font-size:8px;line-height:1.2;overflow:hidden}
 .eventdot.orange{background:rgba(255,159,122,.16);color:#ffd1c1}.eventdot.purple{background:rgba(201,166,255,.16);color:#eadbff}.eventdot.yellow{background:rgba(245,212,124,.16);color:#fff0ba}.eventdot.pink{background:rgba(242,168,199,.16);color:#ffd9e8}
 .note{padding:13px 15px;border-radius:16px;background:#17151d;border:1px dashed #3a3444;color:var(--muted);font-size:12px}
 .empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed #3a3444;border-radius:18px}
@@ -110,7 +110,7 @@ p{margin:0;color:var(--muted)}
 .modal.open{display:flex}.modalbox{width:min(560px,100%);max-height:85vh;overflow:auto;background:#17151e;border:1px solid var(--line);border-radius:24px;padding:20px}
 .close{float:right;border:1px solid var(--line);background:var(--card);color:var(--text);width:36px;height:36px;border-radius:10px}
 @media(max-width:760px){
- .container{width:min(100% - 20px,1120px)}.nav{min-height:60px}.brand{font-size:16px}.navlinks{order:3;width:100%;margin:0}.topbar{position:sticky}.nav{flex-wrap:wrap;padding:8px 0}.searchbtn{margin-left:auto}
+ .container{width:min(100% - 20px,1120px)}.nav{min-height:60px}.brand{font-size:15px}.navlinks{order:3;width:100%;margin:0}.topbar{position:sticky}.nav{flex-wrap:wrap;padding:8px 0}.searchbtn{margin-left:auto}
  .grid,.grid2{grid-template-columns:1fr}.statrow{grid-template-columns:repeat(2,1fr)}
  .profile{grid-template-columns:1fr}.profile .portrait{height:330px}.schedule-item{grid-template-columns:60px 1fr}.schedule-item .tag{display:none}
  .thumb{width:60px;height:60px}.hero{padding:28px 20px}.hero:after{font-size:75px}.calgrid .day{min-height:74px;padding:5px}.eventdot{font-size:8px}.dow{font-size:9px}
@@ -182,7 +182,7 @@ p{margin:0;color:var(--muted)}
   </div>
 
   <div class="section">
-    <div class="sectionhead"><div><div class="eyebrow">Next up</div><h2>ตารางงานที่กำลังจะมาถึง</h2></div><button class="btn" data-go="schedule">ดูทั้งหมด</button></div>
+    <div class="sectionhead"><div><div class="eyebrow">UPCOMING</div><h2>งานถัดไป</h2></div><button class="btn" data-go="schedule">ดูทั้งหมด</button></div>
     <div id="homeSchedule" class="schedule-list"></div>
   </div>
 
@@ -313,19 +313,45 @@ const works = [
 ];
 
 const events = [
+  // 2024 — verified archive milestones / public events
+  {date:"2024-04-23",person:"EMIBONNIE",type:"OTHER",title:"Emi & Bonnie — pair debut / first joint milestone",time:"",link:"https://www.gmm-tv.com/"},
+  {date:"2024-07-21",person:"EMI",type:"EVENT",title:"The Rebound — related public work period",time:"",link:"https://www.bl-n.com/actors/emiamily/"},
+  {date:"2024-12-03",person:"BONNIE",type:"EVENT",title:"High School Frenemy Final EP. Fan Meeting",time:"",link:"https://en.wikipedia.org/wiki/Pattraphus_Borattasuwan"},
+
+  // 2025 — verified fan meetings / joint activities
+  {date:"2025-04-05",person:"EMIBONNIE",type:"EVENT",title:"Us Final EP. Fan Meeting",time:"",link:"https://en.wikipedia.org/wiki/Pattraphus_Borattasuwan"},
+  {date:"2025-05-17",person:"EMIBONNIE",type:"EVENT",title:"Emi Bonnie 1st Fan Meeting in Taipei",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2025-06-28",person:"EMIBONNIE",type:"EVENT",title:"Blush Blossom Fan Fest",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2025-06-29",person:"EMIBONNIE",type:"EVENT",title:"Blush Blossom Fan Fest",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2025-07-19",person:"EMIBONNIE",type:"EVENT",title:"GMMTV Fanday 22 in Osaka",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2025-08-09",person:"EMIBONNIE",type:"EVENT",title:"Emi & Bonnie 1st Fan Meet in Singapore",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2025-09-27",person:"EMIBONNIE",type:"EVENT",title:"EmiBonnie 1st Fanmeeting in Hong Kong",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2025-11-22",person:"EMIBONNIE",type:"EVENT",title:"GMMTV Fanday 26 in Vietnam",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2025-11-30",person:"EMIBONNIE",type:"EVENT",title:"Blush Blossom Fan Fest in Macau",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+
+  // 2026 — verified public milestones + current schedule data
+  {date:"2026-02-21",person:"EMIBONNIE",type:"OTHER",title:"Riser Music announces Emi & Bonnie as a music duo",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2026-02-24",person:"EMIBONNIE",type:"MUSIC",title:"Fall for You — music debut",time:"",link:"https://www.youtube.com/results?search_query=Emi+Bonnie+Fall+for+You"},
+  {date:"2026-02-21",person:"EMIBONNIE",type:"EVENT",title:"Emi Bonnie 1st Fan Meeting in Manila",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2026-03-07",person:"EMIBONNIE",type:"EVENT",title:"Emi Bonnie : Love Session — Seoul",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2026-03-08",person:"EMIBONNIE",type:"EVENT",title:"Emi Bonnie : Love Session — Seoul",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2026-04-11",person:"EMIBONNIE",type:"EVENT",title:"Emi Bonnie 1st Fan Meeting in Seoul",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2026-05-23",person:"EMIBONNIE",type:"EVENT",title:"Emi Bonnie 1st Fan Meet in Europe — Rome",time:"",link:"https://teathaitalks.fr/2026/05/03/emibonnie/"},
+  {date:"2026-07-30",person:"EMIBONNIE",type:"EVENT",title:"Moonshadow gathering",time:"19:00",link:"https://www.sotwe.com/diaryyypp"},
   {date:"2026-08-10",person:"EMIBONNIE",type:"MUSIC",title:"Red Kiss — Music Video Release",time:"",link:"https://www.youtube.com/results?search_query=Red+Kiss+EMIBONNIE"},
-  {date:"2026-08-12",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.1",time:"20:30",link:"https://www.gmm-tv.com/contents/VkMEL/"},
-  {date:"2026-08-19",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.2",time:"20:30",link:"https://www.gmm-tv.com/contents/VkMEL/"},
-  {date:"2026-08-26",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.3",time:"20:30",link:"https://www.gmm-tv.com/contents/VkMEL/"},
-  {date:"2026-09-02",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.4",time:"20:30",link:"https://www.gmm-tv.com/contents/VkMEL/"},
-  {date:"2026-09-03",person:"EMI",type:"MUSIC",title:"Glitch — Music Video Release",time:"",link:"https://www.gmm-tv.com/contents/zvJjD/"},
-  {date:"2026-09-09",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.5",time:"20:30",link:"https://www.gmm-tv.com/contents/VkMEL/"},
-  {date:"2026-09-12",person:"BONNIE",type:"MUSIC",title:"Your One — Music Video Release",time:"",link:"https://www.gmm-tv.com/news/4431/"},
-  {date:"2026-09-16",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.6",time:"20:30",link:"https://www.gmm-tv.com/contents/VkMEL/"},
-  {date:"2026-09-23",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.7",time:"20:30",link:"https://www.gmm-tv.com/contents/VkMEL/"},
-  {date:"2026-09-30",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.8",time:"20:30",link:"https://www.gmm-tv.com/contents/VkMEL/"},
-  {date:"2026-10-07",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.9",time:"20:30",link:"https://www.gmm-tv.com/contents/VkMEL/"},
-  {date:"2026-10-14",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.10 / Final",time:"20:30",link:"https://www.gmm-tv.com/contents/VkMEL/"}
+  {date:"2026-08-12",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.1",time:"20:30",link:"https://www.gmm-tv.com/"},
+  {date:"2026-08-19",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.2",time:"20:30",link:"https://www.gmm-tv.com/"},
+  {date:"2026-08-26",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.3",time:"20:30",link:"https://www.gmm-tv.com/"},
+  {date:"2026-09-02",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.4",time:"20:30",link:"https://www.gmm-tv.com/"},
+  {date:"2026-09-03",person:"EMI",type:"MUSIC",title:"Glitch — Music Video Release",time:"",link:"https://www.gmm-tv.com/"},
+  {date:"2026-09-08",person:"EMIBONNIE",type:"EVENT",title:"Moonshadow gathering — Union Mall",time:"18:30",link:"https://www.sotwe.com/EMBNIEPP"},
+  {date:"2026-09-09",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.5",time:"20:30",link:"https://www.gmm-tv.com/"},
+  {date:"2026-09-12",person:"BONNIE",type:"MUSIC",title:"Your One — Music Video Release",time:"",link:"https://www.gmm-tv.com/"},
+  {date:"2026-09-16",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.6",time:"20:30",link:"https://www.gmm-tv.com/"},
+  {date:"2026-09-23",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.7",time:"20:30",link:"https://www.gmm-tv.com/"},
+  {date:"2026-09-30",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.8",time:"20:30",link:"https://www.gmm-tv.com/"},
+  {date:"2026-10-07",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.9",time:"20:30",link:"https://www.gmm-tv.com/"},
+  {date:"2026-10-14",person:"EMIBONNIE",type:"SERIES",title:"Moonshadow EP.10 / Final",time:"20:30",link:"https://www.gmm-tv.com/"}
 ];
 
 const anyTimeline=[
@@ -334,7 +360,7 @@ const anyTimeline=[
 ];
 
 let scheduleFilter="ALL", workFilter="ALL", calFilter="ALL";
-let calDate=new Date(2026,8,1);
+let calDate=new Date(2024,0,1);
 
 const colorFor = p => p==="EMI"?"orange":p==="BONNIE"?"purple":p==="ANY"?"yellow":"pink";
 const emojiFor = p => p==="EMI"?"🧡":p==="BONNIE"?"💜":p==="ANY"?"💛":"💗";
