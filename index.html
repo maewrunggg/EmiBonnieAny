@@ -85,7 +85,7 @@ p{margin:0;color:var(--muted)}
 .work-card img{height:210px;width:100%;object-fit:cover;background:#292631}
 .work-card .pad{min-height:135px}
 .work-card .meta{font-size:12px;color:var(--muted);margin-top:5px}
-.profile{display:grid;grid-template-columns:300px 1fr;gap:18px}
+#profileArea{scroll-margin-top:78px}.profile{display:grid;grid-template-columns:300px 1fr;gap:18px}
 .profile .portrait{height:390px;border-radius:20px}
 .socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .social{border:1px solid var(--line);padding:8px 11px;border-radius:12px;background:var(--card);font-size:12px}
@@ -136,9 +136,9 @@ p{margin:0;color:var(--muted)}
 <main class="container">
 <section id="home" class="view active">
   <div class="hero">
-    <div class="eyebrow">Fan Archive & Guide</div>
+    <div class="eyebrow">EmiBonnieAny</div>
     <h1>EmiBonnieAny 🦋</h1>
-    <p>รวมข้อมูล ผลงาน ตารางงาน และ timeline ของ Emi, Bonnie, EmiBonnie และ ANY ไว้ในที่เดียว</p>
+    <p>butterfly family from Anys.</p>
     <div class="hero-actions">
       <button class="btn primary" data-go="schedule">📅 ตารางงาน</button>
       <button class="btn" data-go="calendar">🗓️ เปิด Calendar</button>
@@ -153,7 +153,7 @@ p{margin:0;color:var(--muted)}
       <div class="card pad" style="border-color:rgba(255,159,122,.25)"><span class="tag orange">🧡 EMI</span><h3 style="margin-top:8px">Emi Thasorn</h3><p>Profile · Social · Works · Timeline</p><button class="btn" style="margin-top:13px" data-person="emi">เปิดโปรไฟล์ →</button></div>
       <div class="card pad" style="border-color:rgba(201,166,255,.25)"><span class="tag purple">💜 BONNIE</span><h3 style="margin-top:8px">Bonnie Pattraphus</h3><p>Profile · Social · Works · Timeline</p><button class="btn" style="margin-top:13px" data-person="bonnie">เปิดโปรไฟล์ →</button></div>
       <div class="card pad" style="border-color:rgba(242,168,199,.25)"><span class="tag pink">💗 EMIBONNIE</span><h3 style="margin-top:8px">EmiBonnie</h3><p>Joint works · Music · Series · Timeline</p><button class="btn" style="margin-top:13px" data-go="works">ดูผลงานร่วม →</button></div>
-      <div class="card pad" style="border-color:rgba(245,212,124,.25)"><span class="tag yellow">💛 ANY</span><h3 style="margin-top:8px">ANY 🦋</h3><p>Fan projects · Milestones · Social · Timeline</p><button class="btn" style="margin-top:13px" data-go="any">เข้า ANY →</button></div>
+      <div class="card pad" style="border-color:rgba(245,212,124,.25)"><span class="tag yellow">💛 ANY</span><h3 style="margin-top:8px">ANY 🦋</h3><p>Profile · Social · Timeline</p><button class="btn" style="margin-top:13px" data-go="any">เข้า ANY →</button></div>
     </div>
   </div>
 
@@ -241,31 +241,19 @@ p{margin:0;color:var(--muted)}
 <section id="any" class="view">
   <div class="hero" style="background:linear-gradient(135deg,rgba(245,212,124,.10),rgba(201,166,255,.07))">
     <div class="eyebrow">ANY 🦋</div><h1>ANY</h1>
-    <p>พื้นที่สำหรับเก็บข้อมูลของ ANY 🦋, fan projects, milestones และ timeline ต่าง ๆ</p>
+    <p>พื้นที่สำหรับเก็บข้อมูลของ ANY 🦋 และ timeline ต่าง ๆ</p>
     <div class="hero-actions"><a class="btn primary" href="https://www.instagram.com/anygmmtv/" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="https://x.com/any_GMMTV" target="_blank" rel="noopener">X ↗</a><a class="btn" href="https://www.tiktok.com/@anygmmtv" target="_blank" rel="noopener">TikTok ↗</a></div>
   </div>
   <div class="section grid2">
     <div class="card pad"><span class="tag yellow">💛 BASIC</span><h3 style="margin-top:8px">ANY Archive</h3><p>รวมวันสำคัญของแฟนด้อม โปรเจกต์ และ milestones ที่เกี่ยวข้องกับ ANY</p></div>
     <div class="card pad"><span class="tag yellow">🦋 MOTIF</span><h3 style="margin-top:8px">Butterfly</h3><p>ผีเสื้อเป็น visual identity ของ ANY ในเว็บไซต์นี้</p></div>
   </div>
-  <div class="section"><div class="sectionhead"><div><div class="eyebrow">PROFILE</div><h2>ANY 🦋</h2></div></div><div class="card pad"><p>ANY — mascot / character associated with EmiBonnie.</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><a class="btn" href="https://www.instagram.com/anygmmtv/" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="https://x.com/any_GMMTV" target="_blank" rel="noopener">X ↗</a><a class="btn" href="https://www.tiktok.com/@anygmmtv" target="_blank" rel="noopener">TikTok ↗</a></div></div></div>
+  <div class="section"><div class="sectionhead"><div><div class="eyebrow">PROFILE</div><h2>ANY 🦋</h2></div></div><div class="card pad"><img class="portrait contain" style="height:320px;object-fit:contain;background:#15131d" src="https://emibonnieguide.vercel.app/any_character.jpg" alt="ANY 🦋" onerror="this.style.display='none'"><p style="margin-top:14px">ANY — GMMTV Fandom Character representing EmiBonnie. 🦋</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><a class="btn" href="https://www.instagram.com/anygmmtv/" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="https://x.com/any_GMMTV" target="_blank" rel="noopener">X ↗</a><a class="btn" href="https://www.tiktok.com/@anygmmtv" target="_blank" rel="noopener">TikTok ↗</a></div></div></div>
   <div class="section"><div class="sectionhead"><div><div class="eyebrow">Timeline</div><h2>ANY Timeline</h2></div></div><div id="anyTimeline" class="timeline"></div></div>
 </section>
 
-<section class="section" id="archiveSourcesSection">
-  <div class="sectionhead"><div><div class="eyebrow">ARCHIVE SOURCES</div><h2>แหล่งติดตาม</h2></div></div>
-  <div class="grid2">
-    <div class="card pad"><span class="tag yellow">OFFICIAL</span><h3 style="margin-top:8px">GMMTV</h3><p>ใช้ GMMTV website + GMMTV X เป็นแหล่งหลักของข้อมูลทางการ</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><a class="btn" href="https://www.gmm-tv.com/" target="_blank" rel="noopener">GMMTV ↗</a><a class="btn" href="https://x.com/GMMTV" target="_blank" rel="noopener">GMMTV X ↗</a></div></div>
-    <div class="card pad"><span class="tag pink">INSTAGRAM TRACKING</span><h3 style="margin-top:8px">IG → Calendar</h3><p>เว็บนี้เป็น static HTML จึงไม่สามารถดึงโพสต์ Instagram ใหม่เข้า Calendar อัตโนมัติได้ การอัปเดตที่ยืนยันแล้วให้เพิ่มใน <code>events</code> ด้วย type: "IG" และใส่วันที่ + ลิงก์โพสต์</p></div>
-    <div class="card pad"><span class="tag pink">TRACKING</span><h3 style="margin-top:8px">Fan Schedule Sources</h3><p>#emibonnieschedule · #EmiBonnieAnySchedule · #emiamilyschedule · #BONNIESCHEDULE</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><a class="btn" href="https://x.com/emibonnieth/status/2098045810974007495?s=46" target="_blank" rel="noopener">EmiBonnie TH ↗</a><a class="btn" href="https://thasornschedule.vercel.app/" target="_blank" rel="noopener">Thasorn Schedule ↗</a><a class="btn" href="https://x.com/bonnieofficial_/status/2094633983028162638?s=46" target="_blank" rel="noopener">Bonnie Official TH ↗</a></div></div>
-  </div>
-  <div class="card pad" style="margin-top:12px"><span class="tag orange">YOUTUBE</span><h3 style="margin-top:8px">Playlist tracking</h3><p>ฝัง playlist นี้ไว้หน้า Home แล้ว และใช้เป็น source สำหรับเก็บรายการอัปโหลดที่ตรวจสอบวันได้จริงใน Calendar</p><a class="btn primary" style="margin-top:12px" href="https://youtube.com/playlist?list=PLC53JJ9ATdMhHqEqw-DsAU-KTgBNK_5Pa&si=x52-a8hqKVh4N7yB" target="_blank" rel="noopener">เปิด Playlist ↗</a></div>
-</section>
 
-<footer class="footer">
-  <strong>EmiBonnieAny 🦋</strong> · Fan-made archive & guide · Not affiliated with GMMTV.
-  <br>ข้อมูลบางส่วนเป็น archive ที่แฟนรวบรวม ควรตรวจสอบกับช่องทางทางการเมื่อมีการเปลี่ยนแปลง
-</footer>
+
 </main>
 
 <div class="modal" id="modal"><div class="modalbox"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
@@ -310,22 +298,43 @@ const people = {
       ["2025","Us รักของเรา · Between Us · More Than Words / joint works"],
       ["2026","EMIBONNIE · Love Session · Moonshadow · Your One"]
     ]
+  },
+  any:{
+    key:"ANY", emoji:"💛", name:"ANY", thai:"เอนี่ — GMMTV Fandom Character ของ EmiBonnie",
+    dob:"14 March 2025", height:"", weight:"",
+    image:"https://emibonnieguide.vercel.app/any_character.jpg",
+    links:[["Instagram","https://www.instagram.com/anygmmtv/"],["X","https://x.com/any_GMMTV"],["TikTok","https://www.tiktok.com/@anygmmtv"]],
+    timeline:[["14 Mar 2025","ANY birthday / first birthday year"],["2026","GMMTV identifies ANY as the character representing EmiBonnie"],["2026","ANY character / fandom activities"]]
   }
 };
 
 const works = [
-  {title:"Us รักของเรา",type:"SERIES",person:"EMIBONNIE",date:"2025-01-18",image:"",desc:"ผลงานซีรีส์ร่วมของ Emi Thasorn และ Bonnie Pattraphus · Pam & Dokrak",link:"https://www.gmm-tv.com/contents/zbwpd/"},
-  {title:"ไม่อยากจูบเธอในฝัน (Kissin' Out of Dream)",type:"MUSIC",person:"EMIBONNIE",date:"2025-03-15",image:"",desc:"Ost. Us รักของเรา · Emi Thasorn, Bonnie Pattraphus",link:"https://www.gmm-tv.com/contents/VBY1O/"},
-  {title:"มากกว่าที่รัก (More Than Words)",type:"MUSIC",person:"EMI",date:"2025-02-27",image:"",desc:"Ost. Us รักของเรา · Emi Thasorn",link:"https://www.gmm-tv.com/contents/8omop/"},
-  {title:"Between Us",type:"MUSIC",person:"BONNIE",date:"2025-02-01",image:"",desc:"Ost. Us รักของเรา · Bonnie Pattraphus",link:"https://www.gmm-tv.com/contents/VK02Z/"},
-  {title:"Girl Rules กฎหลัก...ห้ามรักเธอ",type:"SERIES • SUPPORTING",person:"EMIBONNIE",date:"2026-03-09",image:"",desc:"Bonnie = ใบพร · Emi = Kris/Krystal · บทสมทบ",link:"https://www.gmm-tv.com/contents/episode/68KRQ/"},
-  {title:"เงาใต้พระจันทร์ Moonshadow",type:"SERIES",person:"EMIBONNIE",date:"2026-08-12",image:"",desc:"Emi รับบท จันทร์ · Bonnie รับบท คีย์",link:"https://www.gmm-tv.com/"},
-  {title:"เพลงรักที่ยังไม่ลืม (Glitch)",type:"MUSIC",person:"EMI",date:"2026-09-03",image:"",desc:"ซิงเกิลเดี่ยวแรกของ Emi · GMMTV / RISER",link:"https://www.gmm-tv.com/news/"},
-  {title:"จะรักให้จำ (Your One)",type:"MUSIC",person:"BONNIE",date:"2026-09-12",image:"",desc:"ซิงเกิลเดี่ยวของ Bonnie · Emi ร่วมแสดง MV",link:"https://www.gmm-tv.com/news/4431/"},
-  {title:"เพลงรักที่ยังไม่ลืม (Glitch)",type:"MUSIC",person:"EMI",date:"2026-09-03",image:"",desc:"OST. Moonshadow · Bonnie ร่วมแสดง MV",link:"https://www.gmm-tv.com/"},
-  {title:"Forever Yours",type:"MUSIC",person:"EMI",date:"2026-05-11",image:"",desc:"OST. Girl Rules กฎหลัก...ห้ามรักเธอ",link:"https://www.gmm-tv.com/contents/episode/68KRQ/"},
-  {title:"MV Appearance — Your One",type:"MV",person:"EMI",date:"2026-09-12",image:"",desc:"Emi ร่วมแสดง MV ของ Bonnie",link:"https://www.gmm-tv.com/news/4431/"},
-  {title:"MV Appearance — Glitch",type:"MV",person:"BONNIE",date:"2026-09-03",image:"",desc:"Bonnie ร่วมแสดง MV ของ Emi",link:"https://www.gmm-tv.com/"}
+ {title:"High School Frenemy มิตรภาพ คราบศัตรู",type:"SERIES • SUPPORTING",person:"BONNIE",date:"2024-10-14",desc:"Bonnie = Peeta / พีตา",link:"https://www.gmm-tv.com/"},
+ {title:"The Rebound เกมนี้เพื่อนาย",type:"SERIES • SUPPORTING",person:"EMI",date:"2024-06-26",desc:"Emi = Lin / หลิน",link:"https://www.gmm-tv.com/"},
+ {title:"Beauty Newbie หัวใจไม่มีปลอม",type:"SERIES • SUPPORTING",person:"EMI",date:"2024-02-19",desc:"Emi = Ann / แอน",link:"https://www.gmm-tv.com/contents/episode/Z5wx6/"},
+ {title:"Perfect 10 Liners สายรหัสเทวดา",type:"SERIES • SUPPORTING",person:"EMI",date:"2024-10-27",desc:"Emi = Yeepun / ยี่หวา",link:"https://www.gmm-tv.com/"},
+ {title:"The Trainee ฝึกงานเทอมนี้ รักพี่ได้มั้ย",type:"SERIES • SUPPORTING",person:"EMI",date:"2024-06-30",desc:"Emi = Ink / อิงค์",link:"https://www.gmm-tv.com/"},
+ {title:"Wandee Goodday วันดีวิทยา",type:"SERIES • SUPPORTING",person:"EMI",date:"2024-05-04",desc:"Emi = Khwan / ขวัญ",link:"https://www.gmm-tv.com/"},
+ {title:"Us รักของเรา",type:"SERIES • MAIN",person:"EMIBONNIE",date:"2025-01-18",desc:"Emi = Pam · Bonnie = Dokrak",link:"https://www.gmm-tv.com/contents/zNn1k/"},
+ {title:"Friendshit Forever เพื่อนสนิท พิษสหาย",type:"SERIES • MAIN",person:"EMI",date:"2025-11-04",desc:"Emi = Tulip / ทิวลิป",link:"https://www.gmm-tv.com/contents/episode/6n3x2/"},
+ {title:"Me and Thee มีสติหน่อยคุณธีร์",type:"SERIES • SUPPORTING",person:"BONNIE",date:"2025-11-15",desc:"Bonnie = Plub / พลับ",link:"https://www.gmm-tv.com/"},
+ {title:"Girl Rules กฎหลัก...ห้ามรักเธอ",type:"SERIES • SUPPORTING",person:"EMIBONNIE",date:"2026-03-09",desc:"Emi = Kris/Krystal · Bonnie = Baipor",link:"https://www.gmm-tv.com/contents/episode/68KRQ/"},
+ {title:"Peach and Me",type:"SERIES • SUPPORTING",person:"EMIBONNIE",date:"2026-07-11",desc:"Emi = Mira · Bonnie = Plub",link:"https://www.youtube.com/@GMMTV"},
+ {title:"เงาใต้พระจันทร์ Moonshadow",type:"SERIES • MAIN",person:"EMIBONNIE",date:"2026-08-12",desc:"Emi = จันทร์ · Bonnie = คีย์",link:"https://www.gmm-tv.com/contents/40DlJ/"},
+ {title:"จำได้ไหม (Here I Am)",type:"MUSIC",person:"EMI",date:"2023-00-00",desc:"OST. Faceless Love รักไม่รู้หน้า",link:"https://www.gmm-tv.com/contents/4p3dd/"},
+ {title:"มุมมอง (Focus)",type:"MUSIC",person:"EMI",date:"2024-00-00",desc:"OST. Beauty Newbie · Gawin Caskey × Emi Thasorn",link:"https://www.gmm-tv.com/contents/86WRr/"},
+ {title:"มากกว่าที่รัก (More Than Words)",type:"MUSIC",person:"EMI",date:"2025-02-27",desc:"OST. Us รักของเรา",link:"https://www.gmm-tv.com/contents/8omop/"},
+ {title:"Between Us",type:"MUSIC",person:"BONNIE",date:"2025-02-01",desc:"OST. Us รักของเรา",link:"https://www.gmm-tv.com/contents/VK02Z/"},
+ {title:"ไม่อยากจูบเธอในฝัน (Kissin' Out of Dream)",type:"MUSIC",person:"EMIBONNIE",date:"2025-03-15",desc:"OST. Us รักของเรา",link:"https://www.gmm-tv.com/contents/VBY1O/"},
+ {title:"หาย (Hide)",type:"MUSIC",person:"EMI",date:"2025-00-00",desc:"OST. Hide & Sis · Aye × Emi",link:"https://www.gmm-tv.com/contents/z2Xb7/"},
+ {title:"เสียใจไม่ช่วยอะไร (No More Tears)",type:"MUSIC",person:"EMI",date:"2025-00-00",desc:"OST. Friendshit Forever",link:"https://www.gmm-tv.com/contents/zvJjD/"},
+ {title:"ภาษารัก (Love Language)",type:"MUSIC",person:"BONNIE",date:"2026-01-20",desc:"OST. Cat For Cash",link:"https://www.gmm-tv.com/contents/playlist/g9ngJ/"},
+ {title:"ยิ่งชิดยิ่งคิด (Fall For You)",type:"MUSIC",person:"EMIBONNIE",date:"2026-02-24",desc:"EMIBONNIE debut single · RISER MUSIC",link:"https://www.gmm-tv.com/news/4170/"},
+ {title:"Forever Yours",type:"MUSIC",person:"EMI",date:"2026-05-11",desc:"OST. Girl Rules",link:"https://www.gmm-tv.com/contents/VyyNM/"},
+ {title:"เพลงรักที่ยังไม่ลืม (Glitch)",type:"MUSIC",person:"EMI",date:"2026-00-00",desc:"OST. Moonshadow",link:"https://www.gmm-tv.com/contents/category_owl/?category_id=71&opt_limit=1"},
+ {title:"จะรักให้จำ (Your One)",type:"MUSIC",person:"BONNIE",date:"2026-00-00",desc:"OST. Moonshadow · Emi ร่วมแสดง MV",link:"https://www.gmm-tv.com/news/4431/"},
+ {title:"MV Appearance — Your One",type:"MV",person:"EMI",date:"2026-00-00",desc:"Emi ร่วมแสดง MV ของ Bonnie",link:"https://www.gmm-tv.com/news/4431/"},
+ {title:"MV Appearance — Glitch",type:"MV",person:"BONNIE",date:"2026-00-00",desc:"Bonnie ร่วมแสดง MV ของ Emi",link:"https://www.gmm-tv.com/contents/category_owl/?category_id=71&opt_limit=1"}
 ];
 
 const events = [
@@ -366,6 +375,23 @@ const events = [
   {date:"2026-06-14",person:"EMIBONNIE",type:"EVENT",title:"Blush Blossom Fan Fest 2026 : Midnight Bloom — Day 2",time:"",link:"https://x.com/GMMTV"}
 ];
 
+
+for(let year=2024;year<=2030;year++){
+  events.push({date:`${year}-04-25`,person:"EMI",type:"BIRTHDAY",title:`Emi birthday — ${year}`,link:"https://www.gmm-tv.com/artists/view/29/"});
+  events.push({date:`${year}-01-27`,person:"BONNIE",type:"BIRTHDAY",title:`Bonnie birthday — ${year}`,link:"https://www.gmm-tv.com/artists/view/14/"});
+}
+for(let year=2025;year<=2030;year++) events.push({date:`${year}-03-14`,person:"ANY",type:"BIRTHDAY",title:`ANY 🦋 birthday — ${year}`,link:"https://x.com/any_GMMTV"});
+[
+ ["2024-04-23","EMIBONNIE","SERIES","Us รักของเรา — announced in GMMTV 2024 PART 2","https://www.youtube.com/@GMMTV"],
+ ["2024-10-14","BONNIE","SERIES","High School Frenemy — Bonnie as Peeta","https://www.gmm-tv.com/"],
+ ["2025-01-18","EMIBONNIE","SERIES","Us รักของเรา — EP.1 / premiere","https://www.gmm-tv.com/contents/zNn1k/"],
+ ["2025-11-04","EMI","SERIES","Friendshit Forever — EP.1 / premiere","https://www.gmm-tv.com/contents/episode/6n3x2/"],
+ ["2025-11-15","BONNIE","SERIES","Me and Thee — premiere / Bonnie as Plub","https://www.gmm-tv.com/"],
+ ["2026-03-09","EMIBONNIE","SERIES","Girl Rules — Emi as Kris/Krystal + Bonnie as Baipor","https://www.gmm-tv.com/contents/episode/68KRQ/"],
+ ["2026-07-11","EMIBONNIE","SERIES","Peach and Me — Emi as Mira + Bonnie as Plub","https://www.youtube.com/@GMMTV"],
+ ["2026-08-12","EMIBONNIE","SERIES","เงาใต้พระจันทร์ Moonshadow — EP.1 / premiere","https://www.gmm-tv.com/contents/40DlJ/"]
+].forEach(([date,person,type,title,link])=>events.push({date,person,type,title,link}));
+
 const anyTimeline=[
   ["14 Mar 2026","ANY 🦋 — birthday / first-birthday celebration reported"],
   ["2026","ANY is the mascot associated with EmiBonnie in the GMMTV archive"],
@@ -400,7 +426,7 @@ function go(view){
 }
 document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.go)));
 document.querySelectorAll(".navlinks button").forEach(b=>b.addEventListener("click",()=>go(b.dataset.view)));
-document.querySelectorAll("[data-person]").forEach(b=>b.addEventListener("click",()=>{go("artists");renderProfile(b.dataset.person)}));
+document.querySelectorAll("[data-person]").forEach(b=>b.addEventListener("click",()=>{go("artists");renderProfile(b.dataset.person);setTimeout(()=>document.getElementById("profileArea").scrollIntoView({behavior:"smooth",block:"start"}),60)}));
 
 function eventCard(e){
  return `<div class="schedule-item">
@@ -416,7 +442,7 @@ function renderSchedule(){
 }
 function workCard(w){
  const img=w.image?`<img src="${w.image}" alt="${w.title}" onerror="this.style.display='none'">`:`<div style="height:210px;background:linear-gradient(135deg,#292431,#17151d);display:grid;place-items:center;font-size:52px">${emojiFor(w.person)}</div>`;
- return `<div class="card work-card">${img}<div class="pad"><span class="tag ${colorFor(w.person)}">${emojiFor(w.person)} ${w.person}</span><span class="tag">${w.type}</span><h3>${w.title}</h3><div class="meta">${w.date} · ${w.desc}</div><a class="btn" style="display:inline-block;margin-top:12px" href="${w.link}" target="_blank" rel="noopener">Official / Info ↗</a></div></div>`;
+ return `<div class="card work-card">${img}<div class="pad"><span class="tag ${colorFor(w.person)}">${emojiFor(w.person)} ${w.person}</span><span class="tag">${w.type}</span><h3>${w.title}</h3><div class="meta">${w.date.includes("-00")?w.date.slice(0,4):w.date} · ${w.desc}</div><a class="btn" style="display:inline-block;margin-top:12px" href="${w.link}" target="_blank" rel="noopener">Official / Info ↗</a></div></div>`;
 }
 function renderWorks(){
  const list=works.filter(w=>(workFilter==="ALL"||w.person===workFilter||w.type===workFilter));
@@ -484,9 +510,18 @@ document.getElementById("openSearch").onclick=()=>{
  if(q){go("works");document.getElementById("workGrid").innerHTML=searchAll(q)}
 };
 
-document.getElementById("statEvents").textContent=events.length;
-document.getElementById("statWorks").textContent=works.length;
-renderSchedule();renderWorks();renderCalendar();renderAny();renderProfile("emi");
+async function loadInstagramTracking(){
+  try{
+    const res=await fetch("ig.json",{cache:"no-store"});
+    if(!res.ok) throw new Error("ig.json unavailable");
+    const data=await res.json();
+    (data.posts||[]).forEach(p=>events.push({date:p.date,person:p.person,type:"IG",title:p.title||`Instagram Update — ${p.person}`,link:p.url||p.profileUrl||"https://www.instagram.com/"}));
+  }catch(e){}
+  document.getElementById("statEvents").textContent=events.length;
+  document.getElementById("statWorks").textContent=works.length;
+  renderSchedule();renderWorks();renderCalendar();renderAny();renderProfile("emi");
+}
+loadInstagramTracking();
 </script>
 </body>
 </html>
