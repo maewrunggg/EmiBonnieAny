@@ -115,6 +115,7 @@ p{margin:0;color:var(--muted)}
  .profile{grid-template-columns:1fr}.profile .portrait{height:330px}.schedule-item{grid-template-columns:60px 1fr}.schedule-item .tag{display:none}
  .thumb{width:60px;height:60px}.hero{padding:28px 20px}.hero:after{font-size:75px}.calgrid .day{min-height:74px;padding:5px}.eventdot{font-size:8px}.dow{font-size:9px}
 }
+.profile-name{color:inherit;text-decoration:none;cursor:pointer}.profile-name:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -139,9 +140,7 @@ p{margin:0;color:var(--muted)}
     <div class="eyebrow">Fan Archive & Guide</div>
     <h1>EmiBonnieAny 🦋</h1>
     <p>รวมข้อมูล ผลงาน ตารางงาน และ timeline ของ Emi, Bonnie, EmiBonnie และ ANY ไว้ในที่เดียว</p>
-    <div class="hero-actions">
-      <a class="btn" href="https://youtube.com/playlist?list=PLC53JJ9ATdMhHqEqw-DsAU-KTgBNK_5Pa&si=x52-a8hqKVh4N7yB" target="_blank" rel="noopener">▶️ YouTube Playlist</a>
-    </div>
+
   </div>
 
   <div class="section">
@@ -217,8 +216,8 @@ p{margin:0;color:var(--muted)}
 <section id="artists" class="view">
   <div class="sectionhead"><div><div class="eyebrow">Artists</div><h2>Artists</h2><p>ข้อมูลส่วนตัวและช่องทางติดตาม</p></div></div>
   <div class="grid2">
-    <div class="card person-card"><img class="portrait" src="https://girlsloveinfo.com/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-21-at-23.28.46.jpeg" alt="Emi Thasorn" onerror="this.style.display='none'"><div class="person-body"><span class="tag orange">🧡 EMI</span><h3>Emi Thasorn</h3><p>เอมี่ ทสร กลิ่นเนียม</p><button class="btn" style="margin-top:12px" data-person="emi">ดูข้อมูล →</button></div></div>
-    <div class="card person-card"><img class="portrait" src="https://www.gmm-tv.com/cms/upload_file/vj_floating2026/share/Bonnie_1200.jpg?time=1784006502" alt="Bonnie Pattraphus" onerror="this.style.display='none'"><div class="person-body"><span class="tag purple">💜 BONNIE</span><h3>Bonnie Pattraphus</h3><p>บอนนี่ ภัทราภัสร์ โบรัชตะสุวรรณ์</p><button class="btn" style="margin-top:12px" data-person="bonnie">ดูข้อมูล →</button></div></div>
+    <div class="card person-card"><img class="portrait" src="https://girlsloveinfo.com/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-21-at-23.28.46.jpeg" alt="Emi Thasorn" onerror="this.style.display='none'"><div class="person-body"><span class="tag orange">🧡 EMI</span><h3><a href="#profileArea" class="profile-name" data-person="emi">Emi Thasorn</a></h3><p>เอมี่ ทสร กลิ่นเนียม</p></div></div>
+    <div class="card person-card"><img class="portrait" src="https://www.gmm-tv.com/cms/upload_file/vj_floating2026/share/Bonnie_1200.jpg?time=1784006502" alt="Bonnie Pattraphus" onerror="this.style.display='none'"><div class="person-body"><span class="tag purple">💜 BONNIE</span><h3><a href="#profileArea" class="profile-name" data-person="bonnie">Bonnie Pattraphus</a></h3><p>บอนนี่ ภัทราภัสร์ โบรัชตะสุวรรณ์</p></div></div>
   </div>
   <div id="profileArea" class="section"></div>
 </section>
