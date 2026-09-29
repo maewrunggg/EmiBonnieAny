@@ -32,7 +32,8 @@ img{max-width:100%;display:block}
 .navlinks{display:flex;gap:6px;margin-left:auto;overflow:auto;scrollbar-width:none}
 .navlinks::-webkit-scrollbar{display:none}
 .navlinks button{border:0;background:transparent;color:var(--muted);padding:9px 10px;border-radius:12px;white-space:nowrap}
-.navlinks button:hover,.navlinks button.active{background:var(--card2);color:var(--text)}
+.navlinks button:hover,.navlinks button.active,.nav-youtube:hover{background:var(--card2);color:var(--text)}
+.nav-youtube{border:0;background:transparent;color:var(--muted);padding:9px 10px;border-radius:12px;white-space:nowrap;text-decoration:none;font:inherit}
 .searchbtn{border:1px solid var(--line);background:var(--card);color:var(--text);width:42px;height:42px;border-radius:13px}
 main{padding:24px 0 80px}
 .view{display:none}.view.active{display:block}
@@ -129,7 +130,7 @@ p{margin:0;color:var(--muted)}
       <button data-view="works">ผลงาน</button>
       <button data-view="calendar">CALENDAR</button>
       <button data-view="artists">ARTISTS</button>
-      <button data-view="any">🦋 ANY</button>
+      <a class="nav-youtube" href="https://youtube.com/playlist?list=PLC53JJ9ATdMhHqEqw-DsAU-KTgBNK_5Pa&si=x52-a8hqKVh4N7yB" target="_blank" rel="noopener">🎵 YOUTUBE</a>
     </div>
     <button class="searchbtn" id="openSearch" aria-label="ค้นหา">⌕</button>
   </div>
@@ -149,7 +150,7 @@ p{margin:0;color:var(--muted)}
       <div class="card pad" style="border-color:rgba(255,159,122,.25)"><img class="home-person-img" src="https://www.gmm-tv.com/cms/upload_file/vj_floating2026/share/Emi_1200.jpg" alt="Emi Thasorn"><span class="tag orange">🧡 EMI</span><h3 style="margin-top:8px">Emi Thasorn</h3><p>Profile · Social · Works · Timeline</p><button class="name-link" data-person="emi">Emi Thasorn</button></div>
       <div class="card pad" style="border-color:rgba(201,166,255,.25)"><img class="home-person-img" src="https://www.gmm-tv.com/cms/upload_file/vj_floating2026/share/Bonnie_1200.jpg?time=1784006502" alt="Bonnie Pattraphus"><span class="tag purple">💜 BONNIE</span><h3 style="margin-top:8px">Bonnie Pattraphus</h3><p>Profile · Social · Works · Timeline</p><button class="name-link" data-person="bonnie">Bonnie Pattraphus</button></div>
       <div class="card pad" style="border-color:rgba(242,168,199,.25)"><img class="home-work-img" src="https://i.ytimg.com/vi/E2KFC2etiWc/maxresdefault.jpg" alt="EmiBonnie Us"><span class="tag pink">💗 EMIBONNIE</span><button class="name-link" data-entity="emibonnie">EmiBonnie</button><p>Joint works · Music · Series · Timeline</p></div>
-      <div class="card pad" style="border-color:rgba(245,212,124,.25)"><img class="home-work-img" src="https://emibonnieguide.vercel.app/any_character.jpg" alt="ANY"><span class="tag yellow">💛 ANY</span><h3 style="margin-top:8px">ANY 🦋</h3><p>Profile · Social · Timeline</p><button class="btn" style="margin-top:13px" data-go="any"></button></div>
+      <div class="card pad" style="border-color:rgba(245,212,124,.25)"><img class="home-work-img" src="https://emibonnieguide.vercel.app/any_character.jpg" alt="ANY"><span class="tag yellow">💛 ANY</span><h3 style="margin-top:8px">ANY 🦋</h3><p>Profile · Social · Timeline</p><button class="name-link" data-person="any">ANY 🦋</button></div>
     </div>
   </div>
 
@@ -187,16 +188,11 @@ p{margin:0;color:var(--muted)}
     <div id="homeWorks" class="grid"></div>
   </div>
 
-  <div class="section statrow">
-    <div class="stat"><b id="statEvents">0</b><span>Archive events</span></div>
-    <div class="stat"><b id="statWorks">0</b><span>Works</span></div>
-    <div class="stat"><b>4</b><span>Profiles</span></div>
-    <div class="stat"><b>🦋</b><span>ANY</span></div>
-  </div>
+
 </section>
 
 <section id="schedule" class="view">
-  <div class="sectionhead"><div><div class="eyebrow">Schedule</div><h2>ตารางงาน</h2><p>รวมซีรีส์ เพลง อีเวนต์ และงานที่มีวันเวลา</p></div></div>
+  <div class="sectionhead"><div><div class="eyebrow">Schedule</div><h2>ตารางงาน</h2><p>ผลงานหลักและงานสำคัญ</p></div></div>
   <div class="filters" id="scheduleFilters">
     <button class="filter active" data-filter="ALL">ALL</button><button class="filter" data-filter="EMI">🧡 EMI</button>
     <button class="filter" data-filter="BONNIE">💜 BONNIE</button><button class="filter" data-filter="EMIBONNIE">💗 EMIBONNIE</button><button class="filter" data-filter="ANY">💛 ANY</button>
@@ -208,13 +204,12 @@ p{margin:0;color:var(--muted)}
   <div class="sectionhead"><div><div class="eyebrow">Works</div><h2>ผลงาน</h2><p>Series · Music · Joint works</p></div></div>
   <div class="filters" id="workFilters">
     <button class="filter active" data-filter="ALL">ALL</button><button class="filter" data-filter="EMI">🧡 EMI</button><button class="filter" data-filter="BONNIE">💜 BONNIE</button><button class="filter" data-filter="EMIBONNIE">💗 EMIBONNIE</button>
-    <button class="filter" data-filter="SERIES">SERIES</button><button class="filter" data-filter="MUSIC">MUSIC</button>
   </div>
   <div id="workGrid" class="grid"></div>
 </section>
 
 <section id="calendar" class="view">
-  <div class="sectionhead"><div><div class="eyebrow">Master Calendar</div><h2>Calendar 🗓️</h2><p>ทุกวันที่มีข้อมูลจะรวมอยู่ที่นี่</p></div></div>
+  <div class="sectionhead"><div><div class="eyebrow">Master Calendar</div><h2>Calendar 🗓️</h2><p>ดูไทม์ไลน์แบบละเอียด</p></div></div>
   <div class="filters" id="calFilters">
     <button class="filter active" data-filter="ALL">ALL</button><button class="filter" data-filter="EMI">🧡 EMI</button><button class="filter" data-filter="BONNIE">💜 BONNIE</button><button class="filter" data-filter="EMIBONNIE">💗 EMIBONNIE</button><button class="filter" data-filter="ANY">💛 ANY</button>
   </div>
@@ -228,21 +223,14 @@ p{margin:0;color:var(--muted)}
 <section id="artists" class="view">
   <div class="sectionhead"><div><div class="eyebrow">Artists</div><h2>Artists</h2><p>ข้อมูลส่วนตัวและช่องทางติดตาม</p></div></div>
   <div class="grid2">
-    <div class="card person-card"><img class="portrait" src="https://girlsloveinfo.com/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-21-at-23.28.46.jpeg" alt="Emi Thasorn" onerror="this.style.display='none'"><div class="person-body"><span class="tag orange">🧡 EMI</span><h3>Emi Thasorn</h3><p>เอมี่ ทสร กลิ่นเนียม</p><button class="btn" style="margin-top:12px" data-person="emi">ดูข้อมูล →</button></div></div>
-    <div class="card person-card"><img class="portrait" src="https://www.gmm-tv.com/cms/upload_file/vj_floating2026/share/Bonnie_1200.jpg?time=1784006502" alt="Bonnie Pattraphus" onerror="this.style.display='none'"><div class="person-body"><span class="tag purple">💜 BONNIE</span><h3>Bonnie Pattraphus</h3><p>บอนนี่ ภัทราภัสร์ โบรัชตะสุวรรณ์</p><button class="btn" style="margin-top:12px" data-person="bonnie">ดูข้อมูล →</button></div></div>
+    <div class="card person-card"><img class="portrait" src="https://girlsloveinfo.com/wp-content/uploads/2025/07/WhatsApp-Image-2025-07-21-at-23.28.46.jpeg" alt="Emi Thasorn" onerror="this.style.display='none'"><div class="person-body"><span class="tag orange">🧡 EMI</span><h3>Emi Thasorn</h3><p>เอมี่ ทสร กลิ่นเนียม</p><button class="name-link" data-person="emi">Emi Thasorn</button></div></div>
+    <div class="card person-card"><img class="portrait" src="https://www.gmm-tv.com/cms/upload_file/vj_floating2026/share/Bonnie_1200.jpg?time=1784006502" alt="Bonnie Pattraphus" onerror="this.style.display='none'"><div class="person-body"><span class="tag purple">💜 BONNIE</span><h3>Bonnie Pattraphus</h3><p>บอนนี่ ภัทราภัสร์ โบรัชตะสุวรรณ์</p><button class="name-link" data-person="bonnie">Bonnie Pattraphus</button></div></div>
+    <div class="card person-card"><img class="portrait" src="https://emibonnieguide.vercel.app/any_character.jpg" alt="ANY 🦋" onerror="this.style.display='none'"><div class="person-body"><span class="tag yellow">💛 ANY</span><h3>ANY 🦋</h3><p>GMMTV fandom character</p><button class="name-link" data-person="any">ANY 🦋</button></div></div>
   </div>
   <div id="profileArea" class="section"></div>
 </section>
 
-<section id="any" class="view">
-  <div class="hero" style="background:linear-gradient(135deg,rgba(245,212,124,.10),rgba(201,166,255,.07))">
-    <div class="eyebrow">ANY 🦋</div><h1>ANY</h1>
-    
-    <div class="hero-actions"><a class="btn primary" href="https://www.instagram.com/anygmmtv/" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="https://x.com/any_GMMTV" target="_blank" rel="noopener">X ↗</a><a class="btn" href="https://www.tiktok.com/@anygmmtv" target="_blank" rel="noopener">TikTok ↗</a></div>
-  </div>
-  <div class="section"><div class="sectionhead"><div><div class="eyebrow">PROFILE</div><h2>ANY 🦋</h2></div></div><div class="card pad"><img class="portrait contain" style="height:320px;object-fit:contain;background:#15131d" src="https://emibonnieguide.vercel.app/any_character.jpg" alt="ANY 🦋" onerror="this.style.display='none'"><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><a class="btn" href="https://www.instagram.com/anygmmtv/" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="https://x.com/any_GMMTV" target="_blank" rel="noopener">X ↗</a><a class="btn" href="https://www.tiktok.com/@anygmmtv" target="_blank" rel="noopener">TikTok ↗</a></div></div></div>
-  <div class="section"><div class="sectionhead"><div><div class="eyebrow">Timeline</div><h2>ANY Timeline</h2></div></div><div id="anyTimeline" class="timeline"></div></div>
-</section>
+
 
 
 
@@ -269,7 +257,7 @@ const people = {
     ],
     timeline:[
       ["25 Apr 1998","Born"],
-      ["2024","GMMTV / individual archive tracking begins"],
+      ["2024","2024"],
       ["2025","Us รักของเรา · More Than Words · Kissin' Out of Dream"],
       ["2026","EMIBONNIE · Love Session · Moonshadow · Glitch"]
     ]
@@ -296,7 +284,7 @@ const people = {
     dob:"14 March 2025", height:"", weight:"",
     image:"https://emibonnieguide.vercel.app/any_character.jpg",
     links:[["Instagram","https://www.instagram.com/anygmmtv/"],["X","https://x.com/any_GMMTV"],["TikTok","https://www.tiktok.com/@anygmmtv"]],
-    timeline:[["14 Mar 2025","ANY birthday / first birthday year"],["2026","GMMTV identifies ANY as the character representing EmiBonnie"],["2026","ANY character / fandom activities"]]
+    timeline:[["14 Mar 2025","ANY birthday / first birthday year"],["2026","ANY fandom character"],["2026","ANY activities"]]
   }
 };
 
@@ -392,6 +380,23 @@ const events = [
 
 ];
 
+// Requested additions — guest concerts and Moonshadow events. Exact post links are only added when supplied/verified.
+events.push(
+ {date:"2026-08-08",person:"EMIBONNIE",type:"GUEST",title:"JUNIORMARK ALONG SUNNYMOON — Guest",time:""},
+ {date:"2026-08-21",person:"EMIBONNIE",type:"GUEST",title:"POND PHUWIN Space Soul-dyssey CONCERT — Guest",time:""},
+ {date:"2026-09-04",person:"BONNIE",type:"GUEST",title:"GEMINI ART-VENTURE CONCERT D1 — Guest",time:""},
+ {date:"2026-09-06",person:"EMI",type:"GUEST",title:"GEMINI ART-VENTURE CONCERT D3 — Guest",time:""},
+ {date:"2026-09-08",person:"EMIBONNIE",type:"GATHERING",title:"รวมพล เงาใต้พระจันทร์ Moonshadow — Union Mall",time:"18:30",link:"https://x.com/moonshadowgmmtv/status/2097337323088404559?s=46",detail:"กิจกรรมรวมพล Moonshadow ที่ Union Mall ชั้น 5 Union Co-Event Space Zone B",keywords:[["#MoonshadowSeries"]]},
+ {date:"2026-09-24",person:"EMIBONNIE",type:"GATHERING",title:"รวมพล เงาใต้พระจันทร์ Moonshadow — GMM GRAMMY ครั้งที่ 2",time:"14:10–15:10",link:"https://x.com/moonshadowgmmtv/status/2103079710930681905?s=46",detail:"กิจกรรมรวมพล Moonshadow ณ ชั้น 21 ห้อง Auditorium ตึก GMM GRAMMY",keywords:[["#MoonshadowSeries","https://x.com/moonshadowgmmtv/status/2103079710930681905?s=46"],["#EmiBonnie","https://x.com/moonshadowgmmtv/status/2103079710930681905?s=46"]]},
+ {date:"2026-08-12",person:"EMIBONNIE",type:"FIRST EP EVENT",title:"Moonshadow First EP — งาน First EP",time:"",link:"https://x.com/moonshadowgmmtv/status/2087559719741517949?s=46",detail:"งาน First EP ของเงาใต้พระจันทร์ Moonshadow",keywords:[["#MoonshadowSeries","https://x.com/moonshadowgmmtv/status/2087559719741517949?s=46"],["#EmiBonnie","https://x.com/moonshadowgmmtv/status/2087559719741517949?s=46"]]},
+ {date:"2026-09-20",person:"ANY",type:"GUEST",title:"SKY NANI S to the N FANCON D2 — ANY Guest",time:""},
+ {date:"2026-10-04",person:"EMIBONNIE",type:"TICKETS",title:"Moonshadow : The Afterglow — เปิดกดบัตร",time:"13:00",link:"https://www.gmm-tv.com/news/4458/",detail:"เปิดจำหน่ายบัตรเวลา 13:00 น.",keywords:[["#MoonshadowSeries"]]},
+ {date:"2026-10-09",person:"EMIBONNIE",type:"FAN SIGN",title:"EmiBonnie Fan Sign — Union Mall",time:"",detail:"งานแฟนไซน์ที่ Union Mall"},
+ {date:"2026-10-14",person:"EMIBONNIE",type:"EVENT",title:"Moonshadow : The Afterglow Fan Party",time:"",link:"https://www.gmm-tv.com/news/4458/"},
+ {date:"2026-10-15",person:"EMIBONNIE",type:"EVENT",title:"Moonshadow : The Afterglow After Party",time:"",link:"https://www.gmm-tv.com/news/4458/",keywords:[["#MoonshadowSeries"]]},
+ {date:"2026-11-28",person:"EMIBONNIE",type:"MAJOR EVENT",title:"GMMTV STARLYMPICS 2026",time:"",links:[["GMMTV", "https://x.com/gmmtv/status/2104511441059401924?s=46"],["Baby Bright Club", "https://x.com/babybrightclub/status/2104532130588221652?s=46"]],keywords:[["#STARLYMPICS"]]}
+);
+
 for(let year=2024;year<=2030;year++){
   events.push({date:`${year}-04-25`,person:"EMI",type:"BIRTHDAY",title:`Emi birthday — ${year}`,link:"https://www.gmm-tv.com/artists/view/29/"});
   events.push({date:`${year}-01-27`,person:"BONNIE",type:"BIRTHDAY",title:`Bonnie birthday — ${year}`,link:"https://www.gmm-tv.com/artists/view/14/"});
@@ -436,6 +441,8 @@ events.push({date:"2025-04-28",person:"EMI",type:"SERIES",title:"Break Up Servic
 for(let i=1;i<=10;i++){const d=new Date("2025-11-26T12:00:00"); d.setDate(d.getDate()+(i-1)*7); events.push({date:d.toISOString().slice(0,10),person:"EMI",type:"SERIES",title:`Burnout Syndrome EP.${i}${i===10?" — ตอนจบ":""}`,time:"21:30",link:"https://www.imdb.com/title/tt38884612/"});}
 events.splice( events.findIndex(e=>e.title==="Beauty Newbie หัวใจไม่มีปลอม EP.1"), 14 );
 const anyTimeline=[];
+// Remove placeholder dates that are intentionally waiting for verification.
+for(let i=events.length-1;i>=0;i--) if(events[i].date.includes("?")) events.splice(i,1);
 
 
 
@@ -465,10 +472,34 @@ function eventCard(e){
    <a class="btn" href="${e.link||"#"}" target="_blank" rel="noopener">↗</a>
  </div>`;
 }
+const scheduleItems = [
+ {date:"2024-02-19",person:"EMI",type:"SERIES",title:"Beauty Newbie หัวใจไม่มีปลอม",time:"เริ่ม 19 Feb 2024",link:"https://www.gmm-tv.com/contents/episode/Z5wx6/"},
+ {date:"2024-05-04",person:"EMI",type:"SERIES",title:"Wandee Goodday วันดีวิทยา",time:"เริ่ม 4 May 2024",link:"https://www.gmm-tv.com/contents/episode/68k1Q/"},
+ {date:"2024-06-26",person:"EMI",type:"SERIES",title:"The Rebound เกมนี้เพื่อนาย",time:"เริ่ม 26 Jun 2024",link:""},
+ {date:"2024-06-30",person:"EMI",type:"SERIES",title:"The Trainee ฝึกงานเทอมนี้ รักพี่ได้มั้ย",time:"เริ่ม 30 Jun 2024",link:"https://www.gmm-tv.com/contents/episode/6Ym56/"},
+ {date:"2024-10-14",person:"BONNIE",type:"SERIES",title:"High School Frenemy มิตรภาพ คราบศัตรู",time:"เริ่ม 14 Oct 2024",link:"https://www.gmm-tv.com/contents/VgvkE/"},
+ {date:"2024-10-27",person:"EMI",type:"SERIES",title:"Perfect 10 Liners สายรหัสเทวดา",time:"เริ่ม 27 Oct 2024",link:"https://www.gmm-tv.com/contents/episode/QmOj2/"},
+ {date:"2025-01-18",person:"EMIBONNIE",type:"SERIES",title:"Us รักของเรา",time:"เริ่ม 18 Jan 2025 · เสาร์ 20:30",link:"https://www.gmm-tv.com/contents/zNn1k/"},
+ {date:"2025-11-04",person:"EMI",type:"SERIES",title:"Friendshit Forever เพื่อนสนิท พิษสหาย",time:"เริ่ม 4 Nov 2025",link:"https://www.gmm-tv.com/contents/episode/6n3x2/"},
+ {date:"2025-11-15",person:"BONNIE",type:"SERIES",title:"Me and Thee มีสติหน่อยคุณธีร์",time:"เริ่ม 15 Nov 2025",link:""},
+ {date:"2026-03-09",person:"EMIBONNIE",type:"SERIES",title:"Girl Rules กฎหลัก...ห้ามรักเธอ",time:"เริ่ม 9 Mar 2026",link:"https://www.gmm-tv.com/contents/episode/68KRQ/"},
+ {date:"2026-07-11",person:"EMIBONNIE",type:"SERIES",title:"Peach and Me มีสติแล้วลูกพีช",time:"เริ่ม 11 Jul 2026",link:"https://www.youtube.com/@GMMTV"},
+ {date:"2026-08-12",person:"EMIBONNIE",type:"SERIES",title:"เงาใต้พระจันทร์ Moonshadow",time:"เริ่ม 12 Aug 2026 · พุธ 20:30",link:"https://www.gmm-tv.com/contents/40DlJ/"}
+];
+
+const upcomingItems = [
+ {date:"2026-10-04",person:"EMIBONNIE",type:"TICKETS",title:"กดบัตร Moonshadow : The Afterglow Fan Party / After Party",time:"13:00",link:"https://www.gmm-tv.com/news/4458/"},
+ {date:"2026-10-09",person:"EMIBONNIE",type:"FAN SIGN",title:"EmiBonnie Fan Sign — Union Mall",time:"",link:""},
+ {date:"2026-10-14",person:"EMIBONNIE",type:"EVENT",title:"Moonshadow : The Afterglow Fan Party",time:"",link:"https://www.gmm-tv.com/news/4458/"},
+ {date:"2026-10-15",person:"EMIBONNIE",type:"EVENT",title:"Moonshadow : The Afterglow After Party",time:"",link:"https://www.gmm-tv.com/news/4458/"},
+ {date:"2026-11-28",person:"EMIBONNIE",type:"MAJOR EVENT",title:"GMMTV STARLYMPICS 2026",time:"",link:"https://x.com/gmmtv/status/2104511441059401924?s=46",links:[["GMMTV", "https://x.com/gmmtv/status/2104511441059401924?s=46"],["Baby Bright Club", "https://x.com/babybrightclub/status/2104532130588221652?s=46"]]},
+ {date:"2026-09-29",person:"EMIBONNIE",type:"UPCOMING",title:"GMMTV — Upcoming",time:"",link:"https://x.com/gmmtv/status/2104868153625088346?s=46",detail:"ลิงก์ประกาศ GMMTV ที่ผู้ใช้ส่งมา"}
+];
+
 function renderSchedule(){
- const list=events.filter(e=>scheduleFilter==="ALL"||e.person===scheduleFilter).sort((a,b)=>a.date.localeCompare(b.date));
+ const list=scheduleItems.filter(e=>scheduleFilter==="ALL"||e.person===scheduleFilter).sort((a,b)=>a.date.localeCompare(b.date));
  document.getElementById("scheduleList").innerHTML=list.length?list.map(eventCard).join(""):`<div class="empty">ยังไม่มีรายการในหมวดนี้</div>`;
- const today=new Date("2026-09-24T12:00:00"); const horizon=new Date("2026-12-31T23:59:59"); const soon=events.filter(e=>{const d=new Date(e.date+"T23:59:59");return d>=today&&d<=horizon&&e.type!=="BIRTHDAY"}).sort((a,b)=>a.date.localeCompare(b.date)); document.getElementById("homeSchedule").innerHTML=soon.slice(0,5).map(eventCard).join("");
+ document.getElementById("homeSchedule").innerHTML=upcomingItems.slice().sort((a,b)=>a.date.localeCompare(b.date)).map(eventCard).join("");
 }
 function workCard(w){
  const img=w.image?`<img class="work-cover" src="${w.image}" alt="${w.title}" onerror="this.style.display='none'">`:`<div class="work-cover placeholder">${w.type.includes("FILM")?"FILM":w.type.includes("MUSIC")?"MUSIC":"SERIES"}</div>`;
@@ -499,13 +530,18 @@ function renderCalendar(){
    const iso=`${y}-${String(m+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
    const es=events.filter(e=>e.date===iso&&(calFilter==="ALL"||e.person===calFilter));
    const today=iso==="2026-09-24"?" today":"";
-   html+=`<div class="day planner-day${today}"><div class="daynum">${d}</div><div class="day-events">${es.slice(0,3).map((e,idx)=>`<button class="day-event ${colorFor(e.person)}" data-event="${events.indexOf(e)}">• ${e.time?e.time+" ":""}${e.title}</button>`).join("")}</div>${es.length>3?`<div class="event-count">+${es.length-3} more</div>`:""}</div>`;
+   html+=`<div class="day planner-day${today}"><div class="daynum">${d}</div><div class="day-events">${es.slice(0,3).map((e,idx)=>`<button class="day-event ${colorFor(e.person)}" data-event="${events.indexOf(e)}">• ${e.title}</button>`).join("")}</div>${es.length>3?`<div class="event-count">+${es.length-3} more</div>`:""}</div>`;
  }
  document.getElementById("calendarGrid").innerHTML=html;
  document.querySelectorAll(".day-event").forEach(b=>b.addEventListener("click",()=>openEvent(events[+b.dataset.event])));
 }
 function openEvent(e){
- document.getElementById("modalContent").innerHTML=`<div class="eyebrow">${e.date}</div><h2 style="margin:8px 0">${e.title}</h2><div class="modal-list"><div class="modal-item"><small>${e.time||""} ${e.type||""}</small><button onclick="window.open('${e.link||"#"}','_blank')">Official / source ↗</button></div></div>`;
+ const detail=e.detail||e.title;
+ const links=(e.links||[]).filter(x=>x&&x[1]);
+ const official=e.link?`<a class="btn" href="${e.link}" target="_blank" rel="noopener">Official / source ↗</a>`:"";
+ const extra=links.map(x=>`<a class="btn" href="${x[1]}" target="_blank" rel="noopener">${x[0]} ↗</a>`).join("");
+ const keywords=(e.keywords||[]).map(x=>x[1]?`<a class="tag" href="${x[1]}" target="_blank" rel="noopener">${x[0]} ↗</a>`:`<span class="tag">${x[0]}</span>`).join("");
+ document.getElementById("modalContent").innerHTML=`<div class="eyebrow">${e.date}</div><h2 style="margin:8px 0">${e.title}</h2><div class="modal-list"><div class="modal-item"><small>${e.time||""} ${e.type||""}</small><div style="margin-top:10px;color:var(--muted);line-height:1.6">${detail}</div></div></div>${official||extra?`<div class="section"><div class="eyebrow">Links</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">${official}${extra}</div></div>`:""}${keywords?`<div class="section"><div class="eyebrow">Keywords / Hashtags</div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">${keywords}</div></div>`:""}`;
  document.getElementById("modal").classList.add("open");
 }
 document.getElementById("prevMonth").onclick=()=>{calDate.setMonth(calDate.getMonth()-1);renderCalendar()};
@@ -538,8 +574,6 @@ document.getElementById("openSearch").onclick=()=>{
  if(q){go("works");document.getElementById("workGrid").innerHTML=searchAll(q)}
 };
 
-document.getElementById("statEvents").textContent=events.length;
-document.getElementById("statWorks").textContent=works.length;
 renderSchedule();renderWorks();renderCalendar();renderAny();renderProfile("emi");
 </script>
 </body>
