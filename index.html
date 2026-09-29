@@ -96,11 +96,12 @@ p{margin:0;color:var(--muted)}
 .calendar-wrap{overflow:hidden;border:1px solid var(--line);border-radius:22px;background:var(--card)}
 .calhead{display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid var(--line)}
 .calhead button{border:1px solid var(--line);background:var(--card2);color:var(--text);width:38px;height:38px;border-radius:11px}
-.calgrid{display:grid;grid-template-columns:repeat(7,1fr)}
-.dow,.day{min-height:88px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px}
-.dow{min-height:auto;font-size:10px;color:var(--muted);font-weight:800;text-align:center;background:#17151d}
+.calgrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));width:100%;table-layout:fixed}
+.dow,.day{min-width:0;width:100%;min-width:0;min-height:88px;box-sizing:border-box;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px;overflow:hidden}
+.dow{min-height:auto;font-size:10px;color:var(--muted);font-weight:800;text-align:center;background:#17151d;white-space:nowrap}
 .day:nth-child(7n){border-right:0}.day.empty{background:#15131b}.daynum{font-size:12px;font-weight:800}
 .day.today .daynum{display:inline-flex;background:var(--yellow);color:#17131b;border-radius:7px;padding:2px 6px}
+.day-events{min-width:0;overflow:hidden}.day-event{display:block;box-sizing:border-box;max-width:100%;min-width:0}
 .eventdot{display:block;margin-top:5px;padding:4px 5px;border-radius:7px;font-size:8px;line-height:1.2;overflow:hidden}
 .eventdot.orange{background:rgba(255,159,122,.16);color:#ffd1c1}.eventdot.purple{background:rgba(201,166,255,.16);color:#eadbff}.eventdot.yellow{background:rgba(245,212,124,.16);color:#fff0ba}.eventdot.pink{background:rgba(242,168,199,.16);color:#ffd9e8}
 .note{padding:13px 15px;border-radius:16px;background:#17151d;border:1px dashed #3a3444;color:var(--muted);font-size:12px}
@@ -111,13 +112,18 @@ p{margin:0;color:var(--muted)}
 .modal.open{display:flex}.modalbox{width:min(560px,100%);max-height:85vh;overflow:auto;background:#17151e;border:1px solid var(--line);border-radius:24px;padding:20px}
 .close{float:right;border:1px solid var(--line);background:var(--card);color:var(--text);width:36px;height:36px;border-radius:10px}
 @media(max-width:760px){
+ .calgrid{grid-template-columns:repeat(7,minmax(0,1fr));overflow:hidden}
+ .dow,.day{padding:6px 4px;min-height:82px}
+ .daynum{font-size:12px}
+ .day-event{font-size:8px}
  .container{width:min(100% - 20px,1120px)}.nav{min-height:60px}.brand{font-size:15px}.navlinks{order:3;width:100%;margin:0}.topbar{position:sticky}.nav{flex-wrap:wrap;padding:8px 0}.searchbtn{margin-left:auto}
  .grid,.grid2{grid-template-columns:1fr}.statrow{grid-template-columns:repeat(2,1fr)}
  .profile{grid-template-columns:1fr}.profile .portrait{height:330px}.schedule-item{grid-template-columns:60px 1fr}.schedule-item .tag{display:none}
  .thumb{width:60px;height:60px}.hero{padding:28px 20px}.hero:after{font-size:75px}.calgrid .day{min-height:74px;padding:5px}.eventdot{font-size:8px}.dow{font-size:9px}
 }
 
-.home-person-img,.home-work-img{width:100%;height:190px;object-fit:cover;border-radius:16px;margin-bottom:12px}.name-link{display:block;border:0;background:none;color:var(--text);padding:0;margin-top:8px;font-size:20px;font-weight:850;text-align:left;cursor:pointer}.name-link:hover{text-decoration:underline}.planner-day{min-height:92px}.day-events{display:flex;flex-direction:column;gap:3px;margin-top:5px}.day-event{border:0;background:transparent;color:var(--muted);padding:2px 0;text-align:left;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}.day-event:hover{color:var(--text)}.event-count{font-size:9px;color:var(--muted);margin-top:3px}.modal-list{display:grid;gap:9px;margin-top:14px}.modal-item{border-left:2px solid var(--line);padding-left:10px}.modal-item button{border:0;background:none;color:var(--text);padding:0;text-align:left;font-weight:750}.modal-item small{display:block;color:var(--muted);margin-top:2px}
+.home-person-img,.home-work-img{width:100%;height:190px;object-fit:cover;border-radius:16px;margin-bottom:12px}.name-link{display:block;border:0;background:none;color:var(--text);padding:0;margin-top:8px;font-size:20px;font-weight:850;text-align:left;cursor:pointer}.name-link:hover{text-decoration:underline}.planner-day{min-height:92px}.day-events{display:flex;flex-direction:column;gap:3px;margin-top:5px;min-width:0;max-width:100%;overflow:hidden}.day-event{display:flex;align-items:center;gap:4px;width:100%;min-width:0;max-width:100%;border:0;background:transparent;color:var(--muted);padding:2px 0;text-align:left;font-size:9px;line-height:1.25;cursor:pointer;overflow:hidden}.day-event:hover{color:var(--text)}.calendar-dots{display:inline-flex;flex:0 0 auto;gap:2px;align-items:center}.calendar-dot{width:5px;height:5px;border-radius:50%;display:inline-block;flex:0 0 5px}.calendar-dot.orange{background:var(--orange)}.calendar-dot.purple{background:var(--purple)}.calendar-dot.yellow{background:var(--yellow)}.calendar-dot.pink{background:var(--pink)}.event-label{display:block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.event-count{font-size:9px;color:var(--muted);margin-top:3px}.modal-list{display:grid;gap:9px;margin-top:14px}.modal-item{border-left:2px solid var(--line);padding-left:10px}.modal-item button{border:0;background:none;color:var(--text);padding:0;text-align:left;font-weight:750}.modal-item small{display:block;color:var(--muted);margin-top:2px}
+@media (max-width:600px){.calendar-wrap{width:100%;overflow:hidden}.calgrid{grid-template-columns:repeat(7,minmax(0,1fr));min-width:0}.dow,.day{width:100%;min-width:0;padding:7px 5px}.planner-day{min-height:92px}.daynum{font-size:12px}.event-label{font-size:8px}.calendar-dot{width:5px;height:5px;flex-basis:5px}.calendar-dots{gap:2px}.day-event{gap:3px;padding:2px 0}.event-count{font-size:8px}}
 </style>
 </head>
 <body>
@@ -382,10 +388,12 @@ const events = [
 
 // Requested additions — guest concerts and Moonshadow events. Exact post links are only added when supplied/verified.
 events.push(
- {date:"2026-08-08",person:"EMIBONNIE",type:"GUEST",title:"JUNIORMARK ALONG SUNNYMOON — Guest",time:""},
- {date:"2026-08-21",person:"EMIBONNIE",type:"GUEST",title:"POND PHUWIN Space Soul-dyssey CONCERT — Guest",time:""},
- {date:"2026-09-04",person:"BONNIE",type:"GUEST",title:"GEMINI ART-VENTURE CONCERT D1 — Guest",time:""},
- {date:"2026-09-06",person:"EMI",type:"GUEST",title:"GEMINI ART-VENTURE CONCERT D3 — Guest",time:""},
+ {date:"2026-08-08",person:"EMIBONNIE",type:"GUEST",title:"JUNIOR MARK SunnyMoon CONCERT — EmiBonnie Guest (D2)",time:"18:00",link:"https://x.com/moonshadowgmmtv/status/2086089636435443972?s=46",keywords:[["#JuniorMarkConcertD2","https://x.com/moonshadowgmmtv/status/2086089636435443972?s=46"]]},
+ {date:"2026-08-21",person:"EMIBONNIE",type:"GUEST",title:"PondPhuwin Space Soul-dyssey CONCERT — EmiBonnie Guest (D1)",time:"",keywords:[["#PondPhuwinConcertD1"]]},
+ {date:"2026-08-22",person:"EMIBONNIE",type:"GUEST",title:"PondPhuwin Space Soul-dyssey CONCERT — EmiBonnie Guest (D2)",time:"",keywords:[["#PondPhuwinConcertD2"]]},
+ {date:"2026-08-23",person:"EMIBONNIE",type:"GUEST",title:"PondPhuwin Space Soul-dyssey CONCERT — EmiBonnie Guest (D3)",time:"",keywords:[["#PondPhuwinConcertD3"]]},
+ {date:"2026-09-04",person:"BONNIE",type:"GUEST",title:"Gemini ART-Venture Concert — Bonnie Guest (D1)",time:"18:00",keywords:[["#GeminiConcertD1"]]},
+ {date:"2026-09-06",person:"EMI",type:"GUEST",title:"Gemini ART-Venture Concert — Emi Guest (D3)",time:"18:00",keywords:[["#GeminiConcertD3"]]},
  {date:"2026-09-08",person:"EMIBONNIE",type:"GATHERING",title:"รวมพล เงาใต้พระจันทร์ Moonshadow — Union Mall",time:"18:30",link:"https://x.com/moonshadowgmmtv/status/2097337323088404559?s=46",detail:"กิจกรรมรวมพล Moonshadow ที่ Union Mall ชั้น 5 Union Co-Event Space Zone B",keywords:[["#MoonshadowSeries"]]},
  {date:"2026-09-24",person:"EMIBONNIE",type:"GATHERING",title:"รวมพล เงาใต้พระจันทร์ Moonshadow — GMM GRAMMY ครั้งที่ 2",time:"14:10–15:10",link:"https://x.com/moonshadowgmmtv/status/2103079710930681905?s=46",detail:"กิจกรรมรวมพล Moonshadow ณ ชั้น 21 ห้อง Auditorium ตึก GMM GRAMMY",keywords:[["#MoonshadowSeries","https://x.com/moonshadowgmmtv/status/2103079710930681905?s=46"],["#EmiBonnie","https://x.com/moonshadowgmmtv/status/2103079710930681905?s=46"]]},
  {date:"2026-08-12",person:"EMIBONNIE",type:"FIRST EP EVENT",title:"Moonshadow First EP — งาน First EP",time:"",link:"https://x.com/moonshadowgmmtv/status/2087559719741517949?s=46",detail:"งาน First EP ของเงาใต้พระจันทร์ Moonshadow",keywords:[["#MoonshadowSeries","https://x.com/moonshadowgmmtv/status/2087559719741517949?s=46"],["#EmiBonnie","https://x.com/moonshadowgmmtv/status/2087559719741517949?s=46"]]},
@@ -508,7 +516,12 @@ function workCard(w){
 function renderWorks(){
  const list=works.filter(w=>(workFilter==="ALL"||(w.people&&w.people.includes(workFilter))||w.person===workFilter||w.type===workFilter));
  document.getElementById("workGrid").innerHTML=list.map(workCard).join("");
- document.getElementById("homeWorks").innerHTML=works.slice(0,3).map(workCard).join("");
+ const latestWorks = works.slice().sort((a,b)=>{
+  const ka=(a.date||"").replace(/-00/g,"-01");
+  const kb=(b.date||"").replace(/-00/g,"-01");
+  return kb.localeCompare(ka);
+});
+document.getElementById("homeWorks").innerHTML=latestWorks.slice(0,3).map(workCard).join("");
 }
 function renderProfile(key){
  const p=people[key]; if(!p)return;
@@ -520,6 +533,15 @@ function renderProfile(key){
    </div><div class="section"><div class="eyebrow">Timeline</div><div class="timeline">${p.timeline.map(t=>`<div class="tl"><time>${t[0]}</time><strong>${t[1]}</strong></div>`).join("")}</div></div></div></div>`;
 }
 function renderAny(){}
+function calendarDots(e){
+  const people = (e.people && e.people.length) ? e.people : (
+    e.person === "EMIBONNIE" ? ["EMI","BONNIE"] :
+    e.person === "ANY" ? ["ANY"] :
+    e.person === "EMI" ? ["EMI"] :
+    e.person === "BONNIE" ? ["BONNIE"] : ["EMI","BONNIE","ANY"]
+  );
+  return [...new Set(people)].map(p=>`<span class="calendar-dot ${colorFor(p)}" aria-hidden="true"></span>`).join("");
+}
 function renderCalendar(){
  const y=calDate.getFullYear(),m=calDate.getMonth();
  document.getElementById("monthTitle").textContent=calDate.toLocaleDateString("en-GB",{month:"long",year:"numeric"});
@@ -529,8 +551,8 @@ function renderCalendar(){
  for(let d=1;d<=total;d++){
    const iso=`${y}-${String(m+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;
    const es=events.filter(e=>e.date===iso&&(calFilter==="ALL"||e.person===calFilter));
-   const today=iso==="2026-09-24"?" today":"";
-   html+=`<div class="day planner-day${today}"><div class="daynum">${d}</div><div class="day-events">${es.slice(0,3).map((e,idx)=>`<button class="day-event ${colorFor(e.person)}" data-event="${events.indexOf(e)}">• ${e.title}</button>`).join("")}</div>${es.length>3?`<div class="event-count">+${es.length-3} more</div>`:""}</div>`;
+   const today=iso==="2026-09-29"?" today":"";
+   html+=`<div class="day planner-day${today}"><div class="daynum">${d}</div><div class="day-events">${es.slice(0,3).map(e=>`<button class="day-event" data-event="${events.indexOf(e)}" title="${e.title.replace(/"/g,"&quot;")}"><span class="calendar-dots">${calendarDots(e)}</span><span class="event-label">${e.title}</span></button>`).join("")}</div>${es.length>3?`<div class="event-count">+${es.length-3} more</div>`:""}</div>`;
  }
  document.getElementById("calendarGrid").innerHTML=html;
  document.querySelectorAll(".day-event").forEach(b=>b.addEventListener("click",()=>openEvent(events[+b.dataset.event])));
@@ -541,7 +563,8 @@ function openEvent(e){
  const official=e.link?`<a class="btn" href="${e.link}" target="_blank" rel="noopener">Official / source ↗</a>`:"";
  const extra=links.map(x=>`<a class="btn" href="${x[1]}" target="_blank" rel="noopener">${x[0]} ↗</a>`).join("");
  const keywords=(e.keywords||[]).map(x=>x[1]?`<a class="tag" href="${x[1]}" target="_blank" rel="noopener">${x[0]} ↗</a>`:`<span class="tag">${x[0]}</span>`).join("");
- document.getElementById("modalContent").innerHTML=`<div class="eyebrow">${e.date}</div><h2 style="margin:8px 0">${e.title}</h2><div class="modal-list"><div class="modal-item"><small>${e.time||""} ${e.type||""}</small><div style="margin-top:10px;color:var(--muted);line-height:1.6">${detail}</div></div></div>${official||extra?`<div class="section"><div class="eyebrow">Links</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">${official}${extra}</div></div>`:""}${keywords?`<div class="section"><div class="eyebrow">Keywords / Hashtags</div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">${keywords}</div></div>`:""}`;
+ const prettyDate=new Date(e.date+"T00:00:00").toLocaleDateString("en-GB",{day:"2-digit",month:"long",year:"numeric"});
+ document.getElementById("modalContent").innerHTML=`<div class="eyebrow">${prettyDate}</div><h2 style="margin:8px 0">${e.title}</h2><div class="modal-list"><div class="modal-item"><small>${e.time||""} ${e.type||""}</small><div style="margin-top:10px;color:var(--muted);line-height:1.6">${detail}</div></div></div>${official||extra?`<div class="section"><div class="eyebrow">Links</div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">${official}${extra}</div></div>`:""}${keywords?`<div class="section"><div class="eyebrow">Keywords / Hashtags</div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">${keywords}</div></div>`:""}`;
  document.getElementById("modal").classList.add("open");
 }
 document.getElementById("prevMonth").onclick=()=>{calDate.setMonth(calDate.getMonth()-1);renderCalendar()};
